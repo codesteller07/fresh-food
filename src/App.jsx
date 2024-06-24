@@ -1,3 +1,4 @@
+import { Home } from "@mui/icons-material";
 import "./assets/styles/main.scss";
 
 import AppRouter from "./routes/AppRouter";
@@ -5,7 +6,7 @@ import AppRouter from "./routes/AppRouter";
 function App() {
   return (
     <div>
-      <AppRouter />
+      <Home />
     </div>
   );
 }
