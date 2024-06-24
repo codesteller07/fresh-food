@@ -71,17 +71,21 @@ export default function LandingPage() {
   const [open, setOpen] = useState(true);
   const [activeState, setActiveState] = useState("Home");
   const [showActiveComponent, setActiveComponent] = useState(
-    <HomeScreen />
+    <HomeScreen setActiveState={setActiveState}/>
   );
+
+  const [refresh,setrefresh]=useState(false)
+
+
 
   useEffect(() => {
     switch (activeState) {
       case "Home":
-        setActiveComponent(<HomeScreen setActiveState={setActiveState} />);
+        setActiveComponent(<HomeScreen setActiveState={setActiveState}/>);
         break;
 
       case "Menu":
-        setActiveComponent(<Menu />);
+        setActiveComponent(<Menu  refresh={refresh}/>);
         break;
       case "My Favourites":
         setActiveComponent(<Favorites />);
@@ -96,7 +100,7 @@ export default function LandingPage() {
       default:
         break;
     }
-  }, [activeState]);
+  }, [activeState,refresh]);
 
   const toggleDrawer = () => {
     setOpen(!open);
@@ -154,6 +158,7 @@ export default function LandingPage() {
             <MainListItems
               setActiveState={setActiveState}
               activeState={activeState}
+              setrefresh={setrefresh} refresh={refresh}
             />
             <Divider sx={{ my: 1 }} />
           </List>

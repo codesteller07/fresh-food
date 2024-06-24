@@ -32,13 +32,13 @@ const listItemsData = [
   },
 ];
 
-const MainListItems = ({ activeState, setActiveState }) => {
+const MainListItems = ({ activeState, setActiveState,setrefresh,refresh }) => {
   return (
     <React.Fragment>
       {listItemsData.map((item, index) => (
         <ListItemButton
           key={index}
-          onClick={() => setActiveState(item.text)}
+          onClick={() =>{ setActiveState(item.text) ;setrefresh(!refresh)}}
           sx={{
             bgcolor:
               activeState === item.text ? "rgba(0, 0, 0, 0.2)" : "transparent",

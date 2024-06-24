@@ -12,7 +12,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-export default function HomeScreen({setActiveState}) {
+export default function HomeScreen({setActiveState,refresh,setrefresh}) {
   return (
     <div>
       {" "}

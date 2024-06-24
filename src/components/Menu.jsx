@@ -37,7 +37,7 @@ const theme = createTheme({
   },
 });
 
-export default function Menu() {
+export default function Menu({ refresh }) {
   const [CategoryByName, setCategoryByName] = useState("");
   const [Category, setCategory] = useState([]);
   const [loading, setLoading] = useState(true); // Loading state
@@ -52,6 +52,10 @@ export default function Menu() {
       setLoading(false); // Set loading to false even if there's an error
     }
   };
+
+  useEffect(() => {
+    setCategoryByName("");
+  }, [refresh]);
 
   useEffect(() => {
     getCategories();
