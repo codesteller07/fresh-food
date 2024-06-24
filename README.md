@@ -37,10 +37,8 @@ Random Meal Generator Page
 Generates a random meal for the user.
 Allows the user to add the meal to their favorites.
 Technologies Used
-Frontend:
-
+###  Frontend:
 - HTML, CSS, JavaScript (ES6+)
 - React.js (or your chosen frontend framework/library)
-Backend:
-
+### Backend:
 - Utilizes the MealDB API for fetching meal data.
