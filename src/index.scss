@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+#superDeveloper111 {
+  display: none;
+}
+.shadow-img {
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.bgImage {
+  height: 350px;
+  display: table;
+  width: 100%;
+  color: #fff;
+
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  box-sizing: border-box;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://www.freshmenu.com/pages/about/images/thumbnails/1.jpg");
+}
+
+.headingCard {
+  position: relative;
+  width: 100%;
+}
+
+.headingCard::after {
+  content: "";
+  position: absolute;
+  margin-top: 30px;
+  width: 110%;
+  height:4px;
+  left: 0%;
+  background: #fcd306;
+}
+
