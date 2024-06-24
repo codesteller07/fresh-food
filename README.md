@@ -1,5 +1,7 @@
 # Meal Store Website
 
+#### Clone this repo and install module npm i and run command npm run dev to start the project 
+
 ## This project is a single page application (SPA) that utilizes the MealDB API to fetch meal data from a store. Users can browse meals, save their favorites, and generate random meals.
 
 Features
